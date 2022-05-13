@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>User_Widget</class>
+ <widget class="QMainWindow" name="User_Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1152</width>
+    <height>652</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="Log_Out">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>30</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>萝莉体 第二版</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>登出</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1161</width>
+      <height>651</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="Book">
+     <attribute name="title">
+      <string>书籍信息</string>
+     </attribute>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>-40</y>
+        <width>1161</width>
+        <height>651</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/new/prefix1/bachgroundconfirm.png);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QTableWidget" name="tableWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>1141</width>
+         <height>501</height>
+        </rect>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <column>
+        <property name="text">
+         <string>书籍名称</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>书籍作者</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>ISBN代码</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>出版社</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>总本数</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>已借出本数</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>剩余本数</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>价格</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>总借阅次数</string>
+        </property>
+       </column>
+      </widget>
+     </widget>
+     <widget class="QLineEdit" name="BookName">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Search">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>10</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>萝莉体 第二版</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>搜索</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="Publisher">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>10</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="BookOrderType">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>10</y>
+        <width>191</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>以总借阅次数从高到低排序</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>以总借阅次数从低到高排序</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>以剩余本数从高到低排序</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>以剩余本数从低到高排序</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="Writer">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>10</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="ISBNCode">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>10</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <zorder>frame</zorder>
+     <zorder>BookName</zorder>
+     <zorder>Publisher</zorder>
+     <zorder>BookOrderType</zorder>
+     <zorder>Writer</zorder>
+     <zorder>ISBNCode</zorder>
+     <zorder>Search</zorder>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>借阅信息</string>
+     </attribute>
+     <widget class="QFrame" name="frame_3">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>-40</y>
+        <width>1161</width>
+        <height>651</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/new/prefix1/bachgroundconfirm.png);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QTableWidget" name="Borrow_Return_table">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>1121</width>
+         <height>511</height>
+        </rect>
+       </property>
+       <column>
+        <property name="text">
+         <string>ISBN</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>书目名称</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>起始日期</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>结束日期</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>是否已经归还</string>
+        </property>
+       </column>
+      </widget>
+     </widget>
+     <widget class="QComboBox" name="RecordOrderType">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>10</y>
+        <width>131</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>以时间为主次序</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>以ISBN为主次序</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="Search_RecordInfo">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>10</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>萝莉体 第二版</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>搜索</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="BookName_Record">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>10</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="ISBN_Record">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>10</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="User">
+     <attribute name="title">
+      <string>用户信息</string>
+     </attribute>
+     <widget class="QFrame" name="frame_2">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>-40</y>
+        <width>1161</width>
+        <height>651</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/new/prefix1/bachgroundconfirm.png);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="UserId_label">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>110</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>萝莉体 第二版</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>用户名</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="UserId">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>110</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Password_label">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>210</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>萝莉体 第二版</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>密码</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="Password">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>210</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="RealName_label">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>310</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>萝莉体 第二版</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>真名</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="RealName">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>310</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="UserRank_label">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>410</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>萝莉体 第二版</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>用户等级</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="UserRank">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>410</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="MoneyLeft_label">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>310</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>萝莉体 第二版</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>剩余金钱</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="MoneyLeft">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>310</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="Email">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>410</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="MaxBorrowedNum_label">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>110</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>萝莉体 第二版</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>最大借阅数</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="MaxBorrowedNum">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>110</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="AlreadyBorrowedNum">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>210</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Email_label">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>410</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>萝莉体 第二版</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>邮箱</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="AlreadyBorrowedNum_label">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>210</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>萝莉体 第二版</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>已借阅数</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Change_Password">
+      <property name="geometry">
+       <rect>
+        <x>930</x>
+        <y>10</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>萝莉体 第二版</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>修改密码</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>扫码借阅</string>
+     </attribute>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>681</width>
+        <height>591</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LabelForImage</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>0</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开启摄像头</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>30</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>关闭摄像头</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="BorrowList">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>70</y>
+        <width>331</width>
+        <height>511</height>
+       </rect>
+      </property>
+      <column>
+       <property name="text">
+        <string>ISBN号</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>书目名称</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="BorrowConfirm">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>0</y>
+        <width>131</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>借阅以下书籍</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ReturnConfirm">
+      <property name="geometry">
+       <rect>
+        <x>930</x>
+        <y>0</y>
+        <width>101</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>归还以下书籍</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <zorder>tabWidget</zorder>
+   <zorder>Log_Out</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action">
+   <property name="text">
+    <string>账户信息</string>
+   </property>
+   <property name="toolTip">
+    <string>账户信息</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>账户升级</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

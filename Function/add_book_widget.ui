@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Add_Book_Widget</class>
+ <widget class="QWidget" name="Add_Book_Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>331</width>
+    <height>489</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLineEdit" name="ISBNcode">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>130</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>32767</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="PriceOfBook_label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>190</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>书籍价格</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="BookNum">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>160</y>
+     <width>61</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+    </font>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>999</number>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Writer">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>70</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>32767</number>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>871</width>
+     <height>491</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/new/prefix1/bachgroundconfirm.png);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="NameOfBook">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>40</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>32767</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Writer_label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>70</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>作者</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Confirm">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>400</y>
+     <width>91</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>确认</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="NameOfBook_label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>40</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>书名</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="BookNum_label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>160</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>书籍数目</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ScanISBN">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>130</y>
+     <width>121</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>扫码录入ISBN</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="PriceOfBook">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>190</y>
+     <width>62</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <double>9999.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Publisher_label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>100</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>出版社</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Publisher">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>100</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>32767</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Memo_label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>250</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>书籍简介</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="Memo">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>280</y>
+     <width>251</width>
+     <height>111</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="IfGenerateFromDataBase_label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>220</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>是否由数据库生成</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="IfGenerateFromDataBase">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>220</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>32767</number>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>ISBNcode</zorder>
+  <zorder>PriceOfBook_label</zorder>
+  <zorder>BookNum</zorder>
+  <zorder>Writer</zorder>
+  <zorder>NameOfBook</zorder>
+  <zorder>Writer_label</zorder>
+  <zorder>Confirm</zorder>
+  <zorder>NameOfBook_label</zorder>
+  <zorder>BookNum_label</zorder>
+  <zorder>ScanISBN</zorder>
+  <zorder>PriceOfBook</zorder>
+  <zorder>Publisher_label</zorder>
+  <zorder>Publisher</zorder>
+  <zorder>Memo_label</zorder>
+  <zorder>Memo</zorder>
+  <zorder>IfGenerateFromDataBase_label</zorder>
+  <zorder>IfGenerateFromDataBase</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

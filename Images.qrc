@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>bachgroundconfirm.png</file>
+        <file>ICON.ico</file>
+        <file>StartWidget.png</file>
+    </qresource>
+</RCC>

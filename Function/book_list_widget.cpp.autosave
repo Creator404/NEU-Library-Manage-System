@@ -1,0 +1,72 @@
+#include "book_list_widget.h"
+#include "ui_book_list_widget.h"
+#include <QTableWidgetItem>
+#include <QString>
+#include <QSqlQuery>
+#include <QSqlRecord>
+#include <QMessageBox>
+#include "DataStructure/Book.h"
+#include "BasicIO/Read_Book_From_MyLibrary.h"
+
+
+
+Book_List_Widget::Book_List_Widget(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::Book_List_Widget)
+{
+    ui->setupUi(this);
+}
+
+Book_List_Widget::~Book_List_Widget()
+{
+    delete ui;
+}
+
+void Book_List_Widget::Update_Full_Message()
+{
+    QSqlQuery Query;
+    QString ExecSentence,name,author,publisher,isbn;
+    float price;
+    int TotBookNum,AlreadyBorrowedNum,TotBorrowedNum;
+    ExecSentence  = "SELECT * FROM mylibrary WHERE `status` = 1;";
+    Query.exec(ExecSentence);
+    int size = Query.numRowsAffected();
+    ui->tableWidget->setRowCount(size);
+    QSqlRecord rec;
+    int row = 0,col;
+    while(Query.next()){
+        col = 0;
+        rec = Query.record();
+        name = rec.value("BookName").toString();
+        author = rec.value("Author").toString();
+        isbn = rec.value("ISBN").toString();
+        publisher = rec.value("Publisher").toString();
+        price = rec.value("Price").toFloat();
+        TotBookNum = rec.value("TotNum").toInt();
+        AlreadyBorrowedNum = rec.value("AlreadyBorrowedNum").toInt();
+        TotBorrowedNum = rec.value("TotBorrowedNum").toInt();
+
+        ui->tableWidget->setItem(row,col++,new QTableWidgetItem(name));
+        ui->tableWidget->setItem(row,col++,new QTableWidgetItem(author));
+        ui->tableWidget->setItem(row,col++,new QTableWidgetItem(isbn));
+        ui->tableWidget->setItem(row,col++,new QTableWidgetItem(publisher));
+        ui->tableWidget->setItem(row,col++,new QTableWidgetItem(QString::number(TotBookNum)));
+        ui->tableWidget->setItem(row,col++,new QTableWidgetItem(QString::number(AlreadyBorrowedNum)));
+        ui->tableWidget->setItem(row,col++,new QTableWidgetItem(QString::number(TotBookNum-AlreadyBorrowedNum)));
+        ui->tableWidget->setItem(row,col++,new QTableWidgetItem(QString::number(price,'f',2)));
+        ui->tableWidget->setItem(row,col++,new QTableWidgetItem(QString::number(TotBorrowedNum)));
+        qDebug()<<row<<":"<<ui->tableWidget->item(row,0)<<endl;
+        row++;
+    };
+}
+
+void Book_List_Widget::on_tableWidget_cellDoubleClicked(int row, int column)
+{
+    QString isbn = ui->tableWidget->item(row,2)->text().toUtf8().data();
+    Book *Head = Read_Book_Info_By_ISBN_From_Mylibrary(isbn,0);
+    if(!Head){
+        QMessageBox::warning(NULL,QObject::tr("Warning"),QObject::tr("致命错误，并没有获取到该书数据，请重试。"),QMessageBox::Yes);
+        return;
+    }
+    
+}

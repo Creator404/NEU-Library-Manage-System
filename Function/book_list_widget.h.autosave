@@ -1,0 +1,26 @@
+#ifndef BOOK_LIST_WIDGET_H
+#define BOOK_LIST_WIDGET_H
+
+#include <QWidget>
+
+namespace Ui {
+class Book_List_Widget;
+}
+
+class Book_List_Widget : public QWidget
+{
+    Q_OBJECT
+
+public:
+    explicit Book_List_Widget(QWidget *parent = nullptr);
+    ~Book_List_Widget();
+    void Update_Full_Message();
+
+private slots:
+    void on_tableWidget_cellDoubleClicked(int row, int column);
+    
+private:
+    Ui::Book_List_Widget *ui;
+};
+
+#endif // BOOK_LIST_WIDGET_H

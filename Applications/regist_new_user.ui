@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Regist_New_User</class>
+ <widget class="QWidget" name="Regist_New_User">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>346</width>
+    <height>429</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ui version=&quot;4.0&quot;&gt;
+ &lt;widget name=&quot;__qt_fake_top_level&quot;&gt;
+  &lt;widget class=&quot;QLabel&quot; name=&quot;id_label&quot;&gt;
+   &lt;property name=&quot;geometry&quot;&gt;
+    &lt;rect&gt;
+     &lt;x&gt;60&lt;/x&gt;
+     &lt;y&gt;40&lt;/y&gt;
+     &lt;width&gt;51&lt;/width&gt;
+     &lt;height&gt;21&lt;/height&gt;
+    &lt;/rect&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;text&quot;&gt;
+    &lt;string&gt;用户名&lt;/string&gt;
+   &lt;/property&gt;
+  &lt;/widget&gt;
+  &lt;widget class=&quot;QLabel&quot; name=&quot;password_label&quot;&gt;
+   &lt;property name=&quot;geometry&quot;&gt;
+    &lt;rect&gt;
+     &lt;x&gt;60&lt;/x&gt;
+     &lt;y&gt;70&lt;/y&gt;
+     &lt;width&gt;51&lt;/width&gt;
+     &lt;height&gt;21&lt;/height&gt;
+    &lt;/rect&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;text&quot;&gt;
+    &lt;string&gt;密码&lt;/string&gt;
+   &lt;/property&gt;
+  &lt;/widget&gt;
+  &lt;widget class=&quot;QLineEdit&quot; name=&quot;id&quot;&gt;
+   &lt;property name=&quot;geometry&quot;&gt;
+    &lt;rect&gt;
+     &lt;x&gt;130&lt;/x&gt;
+     &lt;y&gt;40&lt;/y&gt;
+     &lt;width&gt;141&lt;/width&gt;
+     &lt;height&gt;20&lt;/height&gt;
+    &lt;/rect&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;maxLength&quot;&gt;
+    &lt;number&gt;15&lt;/number&gt;
+   &lt;/property&gt;
+  &lt;/widget&gt;
+  &lt;widget class=&quot;QLineEdit&quot; name=&quot;passwordconfirm&quot;&gt;
+   &lt;property name=&quot;geometry&quot;&gt;
+    &lt;rect&gt;
+     &lt;x&gt;130&lt;/x&gt;
+     &lt;y&gt;100&lt;/y&gt;
+     &lt;width&gt;141&lt;/width&gt;
+     &lt;height&gt;20&lt;/height&gt;
+    &lt;/rect&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;maxLength&quot;&gt;
+    &lt;number&gt;15&lt;/number&gt;
+   &lt;/property&gt;
+  &lt;/widget&gt;
+  &lt;widget class=&quot;QLabel&quot; name=&quot;realname_label&quot;&gt;
+   &lt;property name=&quot;geometry&quot;&gt;
+    &lt;rect&gt;
+     &lt;x&gt;60&lt;/x&gt;
+     &lt;y&gt;130&lt;/y&gt;
+     &lt;width&gt;51&lt;/width&gt;
+     &lt;height&gt;21&lt;/height&gt;
+    &lt;/rect&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;text&quot;&gt;
+    &lt;string&gt;真实姓名&lt;/string&gt;
+   &lt;/property&gt;
+  &lt;/widget&gt;
+  &lt;widget class=&quot;QLineEdit&quot; name=&quot;realname&quot;&gt;
+   &lt;property name=&quot;geometry&quot;&gt;
+    &lt;rect&gt;
+     &lt;x&gt;130&lt;/x&gt;
+     &lt;y&gt;130&lt;/y&gt;
+     &lt;width&gt;141&lt;/width&gt;
+     &lt;height&gt;20&lt;/height&gt;
+    &lt;/rect&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;maxLength&quot;&gt;
+    &lt;number&gt;8&lt;/number&gt;
+   &lt;/property&gt;
+  &lt;/widget&gt;
+  &lt;widget class=&quot;QLineEdit&quot; name=&quot;password&quot;&gt;
+   &lt;property name=&quot;geometry&quot;&gt;
+    &lt;rect&gt;
+     &lt;x&gt;130&lt;/x&gt;
+     &lt;y&gt;70&lt;/y&gt;
+     &lt;width&gt;141&lt;/width&gt;
+     &lt;height&gt;20&lt;/height&gt;
+    &lt;/rect&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;maxLength&quot;&gt;
+    &lt;number&gt;15&lt;/number&gt;
+   &lt;/property&gt;
+  &lt;/widget&gt;
+  &lt;widget class=&quot;QPushButton&quot; name=&quot;registconfirm&quot;&gt;
+   &lt;property name=&quot;geometry&quot;&gt;
+    &lt;rect&gt;
+     &lt;x&gt;130&lt;/x&gt;
+     &lt;y&gt;170&lt;/y&gt;
+     &lt;width&gt;101&lt;/width&gt;
+     &lt;height&gt;41&lt;/height&gt;
+    &lt;/rect&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;font&quot;&gt;
+    &lt;font&gt;
+     &lt;family&gt;仿宋&lt;/family&gt;
+     &lt;pointsize&gt;14&lt;/pointsize&gt;
+     &lt;weight&gt;50&lt;/weight&gt;
+     &lt;bold&gt;false&lt;/bold&gt;
+    &lt;/font&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;text&quot;&gt;
+    &lt;string&gt;注册&lt;/string&gt;
+   &lt;/property&gt;
+  &lt;/widget&gt;
+  &lt;widget class=&quot;QLabel&quot; name=&quot;passwordconfirm_label&quot;&gt;
+   &lt;property name=&quot;geometry&quot;&gt;
+    &lt;rect&gt;
+     &lt;x&gt;60&lt;/x&gt;
+     &lt;y&gt;100&lt;/y&gt;
+     &lt;width&gt;51&lt;/width&gt;
+     &lt;height&gt;21&lt;/height&gt;
+    &lt;/rect&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;text&quot;&gt;
+    &lt;string&gt;确认密码&lt;/string&gt;
+   &lt;/property&gt;
+  &lt;/widget&gt;
+ &lt;/widget&gt;
+ &lt;resources/&gt;
+&lt;/ui&gt;
+</string>
+  </property>
+  <widget class="QLabel" name="id_label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>用户名</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="password_label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>70</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>密码</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="id">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>30</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>30</number>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="passwordconfirm">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>110</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>30</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="realname_label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>150</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>真实姓名</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="realname">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>150</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>50</number>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="password">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>70</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>30</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="RegistConfirm">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>390</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>注册</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="passwordconfirm_label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>110</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>确认密码</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="UserRank_label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>190</y>
+     <width>101</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>用户注册等级</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="MaxLending_label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>230</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>用户可借阅数目</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Money_label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>270</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>用户押金金额</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="UserRank">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>190</y>
+     <width>141</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLineEdit" name="MaxLending">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>230</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>50</number>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Money">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>270</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>50</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="MailBox_label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>310</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>绑定邮箱</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="MailBox">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>310</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>50</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="GetEmailCode">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>350</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>获取验证码</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Identification_Code">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>350</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>6</number>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>id</tabstop>
+  <tabstop>password</tabstop>
+  <tabstop>passwordconfirm</tabstop>
+  <tabstop>realname</tabstop>
+  <tabstop>RegistConfirm</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

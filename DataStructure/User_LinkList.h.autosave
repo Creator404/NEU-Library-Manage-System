@@ -1,0 +1,24 @@
+#ifndef USER_LINKLIST_H
+#define USER_LINKLIST_H
+
+#include <cstring>
+
+class UserNode{
+public:
+    char data[16];
+    char password[16];
+    char name[16];
+    int UserLevel;
+    int AlreadyBorrowedBook;
+    int MaxBorrowedBook;
+    UserNode(char d[], char pass[], char nam[], int UserL){
+        strcpy(data,d);
+        strcpy(password,pass);
+        strcpy(name,nam);
+        UserLevel = UserL;
+        AlreadyBorrowedBook = 0;
+        MaxBorrowedBook = 5 * UserL;
+    }
+};
+
+#endif // USER_LINKLIST_H

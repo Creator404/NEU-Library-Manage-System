@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Book_List_Widget</class>
+ <widget class="QWidget" name="Book_List_Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1078</width>
+    <height>595</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QComboBox" name="RankMode">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>30</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <item>
+    <property name="text">
+     <string>默认排序</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>借阅次数排序</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>剩余本数排序</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="NewSearch">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>30</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>发起新搜索</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ContinueSearch">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>30</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>继续搜索</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="SearchText">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>30</y>
+     <width>301</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>-10</y>
+     <width>1081</width>
+     <height>611</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/new/prefix1/bachgroundconfirm.png);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>100</y>
+      <width>1021</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <column>
+     <property name="text">
+      <string>书籍名称</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>书籍作者</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>ISBN代码</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>出版社</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>总本数</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>已借出本数</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>剩余本数</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>价格</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>总借阅次数</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>排序方式：</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="SearchMode">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>30</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <item>
+    <property name="text">
+     <string>以书名查找</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>以作者查找</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>以ISBN查找</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="Search_Mode_label">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>30</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>萝莉体 第二版</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>搜索方式：</string>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>RankMode</zorder>
+  <zorder>NewSearch</zorder>
+  <zorder>ContinueSearch</zorder>
+  <zorder>SearchText</zorder>
+  <zorder>label</zorder>
+  <zorder>SearchMode</zorder>
+  <zorder>Search_Mode_label</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
